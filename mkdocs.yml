@@ -9,5 +9,6 @@ nav:
         - 'Pulling and Running Containers': working-with-containers/pulling-and-running-containers.md
         - 'Working with Images': working-with-containers/working-with-images.md
         - 'Container Lifecycle': working-with-containers/container-lifecycle.md
+        - 'List of Common Docker Commands': working-with-containers/list-of-commands.md
     - 'Swarm Mode and Microservices': swarm-mode-and-microservices/coming-soon.md
 theme: material

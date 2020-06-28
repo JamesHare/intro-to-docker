@@ -1,0 +1,4 @@
+site/
+
+# ignore .ds_store files from macOS
+.DS_Store
