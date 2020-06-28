@@ -1,0 +1,13 @@
+site_name: Intro to Docker
+nav:
+    - Home: index.md
+    - About: about.md
+    - 'Overview of Docker': overview-of-docker/coming-soon.md
+    - 'Working with Containers':
+        - 'What is a Container?': working-with-containers/what-is-a-container.md
+        - 'Basic Docker Commands': working-with-containers/basic-docker-commands.md
+        - 'Pulling and Running Containers': working-with-containers/pulling-and-running-containers.md
+        - 'Working with Images': working-with-containers/working-with-images.md
+        - 'Container Lifecycle': working-with-containers/container-lifecycle.md
+    - 'Swarm Mode and Microservices': swarm-mode-and-microservices/coming-soon.md
+theme: material
