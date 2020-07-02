@@ -5,8 +5,6 @@ This guide contains an introduction to Docker. I will continue to update as I le
 
 # Overview of Course
 
-## Overview of Docker
-
 ## Working with Containers
 
 ## Swarm Mode and Microservices
