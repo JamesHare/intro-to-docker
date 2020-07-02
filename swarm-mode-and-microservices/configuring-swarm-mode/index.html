@@ -15,7 +15,7 @@
     
     
       
-        <title>Working with Images - Intro to Docker</title>
+        <title>Configuring Swarm Mode - Intro to Docker</title>
       
     
     
@@ -48,7 +48,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-images" class="md-skip">
+        <a href="#configuring-swarm-mode" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +76,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Working with Images
+              Configuring Swarm Mode
             
           </span>
         </div>
@@ -172,12 +172,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Working with Containers
@@ -201,7 +199,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../what-is-a-container/" title="What is a Container?" class="md-nav__link">
+    <a href="../../working-with-containers/what-is-a-container/" title="What is a Container?" class="md-nav__link">
       What is a Container?
     </a>
   </li>
@@ -213,7 +211,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basic-docker-commands/" title="Basic Docker Commands" class="md-nav__link">
+    <a href="../../working-with-containers/basic-docker-commands/" title="Basic Docker Commands" class="md-nav__link">
       Basic Docker Commands
     </a>
   </li>
@@ -225,7 +223,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../pulling-and-running-containers/" title="Pulling and Running Containers" class="md-nav__link">
+    <a href="../../working-with-containers/pulling-and-running-containers/" title="Pulling and Running Containers" class="md-nav__link">
       Pulling and Running Containers
     </a>
   </li>
@@ -235,20 +233,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Working with Images" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../working-with-containers/working-with-images/" title="Working with Images" class="md-nav__link">
       Working with Images
     </a>
-    
   </li>
 
         
@@ -258,7 +247,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../container-lifecycle/" title="Container Lifecycle" class="md-nav__link">
+    <a href="../../working-with-containers/container-lifecycle/" title="Container Lifecycle" class="md-nav__link">
       Container Lifecycle
     </a>
   </li>
@@ -270,7 +259,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../list-of-commands/" title="List of Common Docker Commands" class="md-nav__link">
+    <a href="../../working-with-containers/list-of-commands/" title="List of Common Docker Commands" class="md-nav__link">
       List of Common Docker Commands
     </a>
   </li>
@@ -285,10 +274,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Swarm Mode and Microservices
@@ -312,7 +303,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/swarm-mode-theory/" title="Swarm Mode Theory" class="md-nav__link">
+    <a href="../swarm-mode-theory/" title="Swarm Mode Theory" class="md-nav__link">
       Swarm Mode Theory
     </a>
   </li>
@@ -322,11 +313,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/configuring-swarm-mode/" title="Configuring Swarm Mode" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Configuring Swarm Mode" class="md-nav__link md-nav__link--active">
       Configuring Swarm Mode
     </a>
+    
   </li>
 
         
@@ -336,7 +336,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/services/" title="Services" class="md-nav__link">
+    <a href="../services/" title="Services" class="md-nav__link">
       Services
     </a>
   </li>
@@ -348,7 +348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/scaling-services/" title="Scaling Services" class="md-nav__link">
+    <a href="../scaling-services/" title="Scaling Services" class="md-nav__link">
       Scaling Services
     </a>
   </li>
@@ -360,7 +360,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/rolling-updates/" title="Rolling Updates" class="md-nav__link">
+    <a href="../rolling-updates/" title="Rolling Updates" class="md-nav__link">
       Rolling Updates
     </a>
   </li>
@@ -402,32 +402,37 @@
                   
                 
                 
-                <h1 id="working-with-images">Working with Images</h1>
-<p>So now we know how the docker run command works and how containers are based off of images.</p>
-<p>If you are still confused at this point, think of it this way:</p>
-<ul>
-<li>Images are stopped Containers</li>
-<li>Containers are running Images</li>
-</ul>
-<p>We already know that docker run [image name] will pull down and start a new container using the image name specified. However, we can just pull down an image without running it by using the following command:</p>
-<pre><code>docker pull [image name]
+                <h1 id="configuring-swarm-mode">Configuring Swarm Mode</h1>
+<p>To build a Swarm with 3 Manager Nodes and 3 Worker Nodes, we will start by executing docker run for 6 containers. These containers can be anything, but should probably just be bare-metal Linux containers for now. We can use the official Ubuntu image from Docker Hub.</p>
+<pre><code>docker run -d --name [mgr-1] ubuntu
 </code></pre>
 
-<p>To pull a specific image version we can include the version in the docker pull command as follows:</p>
-<pre><code>docker pull [image name]:[version]
+<p>Make sure to change the name for each of the containers. When you have 3 contianers running named wrk (worker) and 3 containers named mgr (manager), continue below.</p>
+<p>Let's initialize the swarm by getting into the mgr-1 container.</p>
+<p>Once in the first manager container, execute the following command to initialize the swarm:</p>
+<pre><code>docker swarm init --advertise-addr 192.168.1.5:2377 --listen-addr 192.168.1.5:2377
 </code></pre>
 
-<p>If we don't specify the image version, Docker will just pull the latest release.</p>
-<p>Remember, you can run the docker images command to list all images that you have downloaded to your local machine:</p>
-<pre><code>docker images
+<p>The <strong>--advertise-addr</strong> flag lets Docker know that this is the address that we want it to use for swarm related work.</p>
+<p>The <strong>--listen-addr</strong> flag lets Docker know that this is the address we want is to listen on for Swarm manager traffic.</p>
+<p>The ip address has to be valid on your network and should always be the address of the node that you are on. You can use any port that is in your environemnt. However, 2377 is considered the official Swarm port.</p>
+<p>After execution is complete, a new command will be printed to the console to execute on the Worker Nodes to allow them to join the swarm. Copy this and remember it for later.</p>
+<p>While we are still on the mgr-1 node, execute the following two commands and observe the output:</p>
+<pre><code>docker swarm join-token manager
 </code></pre>
 
-<p>You should take some time to get familiar with Docker Hub. I won't include much info on that here, but head over to https://hub.docker.com and take a look around. Get familiar with the UI. Remember that official images are labeled and are maintained by the teams that built the images and that they often document known security vulnerabilities on older images.</p>
-<p>Finally, let's look at removing local images. You can remove any image that you have downloaded locally by using the following command:</p>
-<pre><code>docker rmi [image name]
+<pre><code>docker swarm join-token worker
 </code></pre>
 
-<p>Remember, you can also include the version number if you want to remove that particular image.</p>
+<p>The output of these two commands will give a much longer command that you should execute on all your manager nodes and worker nodes respectively. Docker will be able to tell which is a manager and which is a worker by the last part of the token given on the --token flag.</p>
+<p>If we want to verify that the swarm has been initialized properly, we can execute the following command:</p>
+<pre><code>docker info
+</code></pre>
+
+<p>In the output, you will see information about the current swarm.</p>
+<p>As a side note, if you ever have a worker node that you want to promote to a manager node, you can execute the following command on that worker node:</p>
+<pre><code>docker node promote [container id]
+</code></pre>
                 
               
               
@@ -446,7 +451,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../pulling-and-running-containers/" title="Pulling and Running Containers" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../swarm-mode-theory/" title="Swarm Mode Theory" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -455,19 +460,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Pulling and Running Containers
+                Swarm Mode Theory
               </div>
             </div>
           </a>
         
         
-          <a href="../container-lifecycle/" title="Container Lifecycle" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../services/" title="Services" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Container Lifecycle
+                Services
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

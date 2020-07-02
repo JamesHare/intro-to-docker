@@ -15,7 +15,7 @@
     
     
       
-        <title>Working with Images - Intro to Docker</title>
+        <title>Scaling Services - Intro to Docker</title>
       
     
     
@@ -48,7 +48,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-images" class="md-skip">
+        <a href="#scaling-services" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +76,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Working with Images
+              Scaling Services
             
           </span>
         </div>
@@ -172,12 +172,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Working with Containers
@@ -201,7 +199,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../what-is-a-container/" title="What is a Container?" class="md-nav__link">
+    <a href="../../working-with-containers/what-is-a-container/" title="What is a Container?" class="md-nav__link">
       What is a Container?
     </a>
   </li>
@@ -213,7 +211,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basic-docker-commands/" title="Basic Docker Commands" class="md-nav__link">
+    <a href="../../working-with-containers/basic-docker-commands/" title="Basic Docker Commands" class="md-nav__link">
       Basic Docker Commands
     </a>
   </li>
@@ -225,7 +223,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../pulling-and-running-containers/" title="Pulling and Running Containers" class="md-nav__link">
+    <a href="../../working-with-containers/pulling-and-running-containers/" title="Pulling and Running Containers" class="md-nav__link">
       Pulling and Running Containers
     </a>
   </li>
@@ -235,20 +233,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Working with Images" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../working-with-containers/working-with-images/" title="Working with Images" class="md-nav__link">
       Working with Images
     </a>
-    
   </li>
 
         
@@ -258,7 +247,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../container-lifecycle/" title="Container Lifecycle" class="md-nav__link">
+    <a href="../../working-with-containers/container-lifecycle/" title="Container Lifecycle" class="md-nav__link">
       Container Lifecycle
     </a>
   </li>
@@ -270,7 +259,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../list-of-commands/" title="List of Common Docker Commands" class="md-nav__link">
+    <a href="../../working-with-containers/list-of-commands/" title="List of Common Docker Commands" class="md-nav__link">
       List of Common Docker Commands
     </a>
   </li>
@@ -285,10 +274,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Swarm Mode and Microservices
@@ -312,7 +303,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/swarm-mode-theory/" title="Swarm Mode Theory" class="md-nav__link">
+    <a href="../swarm-mode-theory/" title="Swarm Mode Theory" class="md-nav__link">
       Swarm Mode Theory
     </a>
   </li>
@@ -324,7 +315,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/configuring-swarm-mode/" title="Configuring Swarm Mode" class="md-nav__link">
+    <a href="../configuring-swarm-mode/" title="Configuring Swarm Mode" class="md-nav__link">
       Configuring Swarm Mode
     </a>
   </li>
@@ -336,7 +327,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/services/" title="Services" class="md-nav__link">
+    <a href="../services/" title="Services" class="md-nav__link">
       Services
     </a>
   </li>
@@ -346,11 +337,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/scaling-services/" title="Scaling Services" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Scaling Services" class="md-nav__link md-nav__link--active">
       Scaling Services
     </a>
+    
   </li>
 
         
@@ -360,7 +360,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/rolling-updates/" title="Rolling Updates" class="md-nav__link">
+    <a href="../rolling-updates/" title="Rolling Updates" class="md-nav__link">
       Rolling Updates
     </a>
   </li>
@@ -402,32 +402,29 @@
                   
                 
                 
-                <h1 id="working-with-images">Working with Images</h1>
-<p>So now we know how the docker run command works and how containers are based off of images.</p>
-<p>If you are still confused at this point, think of it this way:</p>
-<ul>
-<li>Images are stopped Containers</li>
-<li>Containers are running Images</li>
-</ul>
-<p>We already know that docker run [image name] will pull down and start a new container using the image name specified. However, we can just pull down an image without running it by using the following command:</p>
-<pre><code>docker pull [image name]
+                <h1 id="scaling-services">Scaling Services</h1>
+<p>Let's think again about desired state vs current state. Desired state is the state (running, paused, stopped, etc) that we want our container to be in. Current state is, as you may have guessed, the current state that the container is in.</p>
+<p>If we run the following command, we can see the desired state and current state of our 5 services:</p>
+<pre><code>docker service ps myservice1
 </code></pre>
 
-<p>To pull a specific image version we can include the version in the docker pull command as follows:</p>
-<pre><code>docker pull [image name]:[version]
+<p>By looking at the output, we should be able to see the node id of our 5 services and determine which of our 6 containers does not have a service attached. If we access one of our service containers, and then execute a command to shut it down, we should see the 6th container register as a service to cover the work load. Access any of the service containers and execute the following command:</p>
+<pre><code>shutdown -h now
 </code></pre>
 
-<p>If we don't specify the image version, Docker will just pull the latest release.</p>
-<p>Remember, you can run the docker images command to list all images that you have downloaded to your local machine:</p>
-<pre><code>docker images
+<p>Next, run the docker service ps myservice1 command again and you should see 5 services still running.</p>
+<p>This means that the 6th container picked up the work load automatically because Docker sees that the desired state does not match the current state of the swarm. Which means that Docker Swarm will automatically fix itself, as long as enough containers are running in the swarm to begin with, allowing the DevOps team to be more hands off.</p>
+<p>To scale the service to 10 services, we can execute the following command:</p>
+<pre><code>docker service scale myservice1=10
 </code></pre>
 
-<p>You should take some time to get familiar with Docker Hub. I won't include much info on that here, but head over to https://hub.docker.com and take a look around. Get familiar with the UI. Remember that official images are labeled and are maintained by the teams that built the images and that they often document known security vulnerabilities on older images.</p>
-<p>Finally, let's look at removing local images. You can remove any image that you have downloaded locally by using the following command:</p>
-<pre><code>docker rmi [image name]
+<p>We could give any number as an argument.</p>
+<p>We can see the current number of services by executing the following command:</p>
+<pre><code>docker service ps myservice1
 </code></pre>
 
-<p>Remember, you can also include the version number if you want to remove that particular image.</p>
+<p>In the output, you should see 2 services per node.</p>
+<p>It should be noted that if we brought back our node that we shutdown, it will not get automatically added back to the swarm. You will have to go in and add it again as a manager node or a worker node.</p>
                 
               
               
@@ -446,7 +443,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../pulling-and-running-containers/" title="Pulling and Running Containers" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../services/" title="Services" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -455,19 +452,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Pulling and Running Containers
+                Services
               </div>
             </div>
           </a>
         
         
-          <a href="../container-lifecycle/" title="Container Lifecycle" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../rolling-updates/" title="Rolling Updates" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Container Lifecycle
+                Rolling Updates
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

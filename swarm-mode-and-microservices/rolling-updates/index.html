@@ -15,7 +15,7 @@
     
     
       
-        <title>Overview of Docker - Intro to Docker</title>
+        <title>Rolling Updates - Intro to Docker</title>
       
     
     
@@ -48,7 +48,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#coming-soon" class="md-skip">
+        <a href="#rolling-updates" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +76,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Overview of Docker
+              Rolling Updates
             
           </span>
         </div>
@@ -172,40 +172,19 @@
       
       
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Overview of Docker" class="md-nav__link md-nav__link--active">
-      Overview of Docker
-    </a>
-    
-  </li>
-
-    
-      
-      
-      
-
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-3">
       Working with Containers
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Working with Containers" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -295,11 +274,100 @@
       
       
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Swarm Mode and Microservices
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Swarm Mode and Microservices" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Swarm Mode and Microservices
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../../swarm-mode-and-microservices/coming-soon/" title="Swarm Mode and Microservices" class="md-nav__link">
-      Swarm Mode and Microservices
+    <a href="../swarm-mode-theory/" title="Swarm Mode Theory" class="md-nav__link">
+      Swarm Mode Theory
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configuring-swarm-mode/" title="Configuring Swarm Mode" class="md-nav__link">
+      Configuring Swarm Mode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../services/" title="Services" class="md-nav__link">
+      Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scaling-services/" title="Scaling Services" class="md-nav__link">
+      Scaling Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Rolling Updates" class="md-nav__link md-nav__link--active">
+      Rolling Updates
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -334,7 +402,52 @@
                   
                 
                 
-                <h1 id="coming-soon">Coming Soon</h1>
+                <h1 id="rolling-updates">Rolling Updates</h1>
+<p>Pushing updates to applications is a fact of life. Rolling updates give us a better way of updating our applications.</p>
+<p>Let's start by removing our service that we had previously deployed. We can do that by executing the following command:</p>
+<pre><code>docker service rm myservice1
+</code></pre>
+
+<p>We can verify that the service instances have all been destroyed by running the following command:</p>
+<pre><code>docker service ls
+</code></pre>
+
+<p>We should see nothing running in the output, except for the headers.</p>
+<p>Next, we want to create a new overlay network for the service. We can do that by executing the following command:</p>
+<pre><code>docker network create -d overlay my-net
+</code></pre>
+
+<p>To check that the overlay was created successfully, execute the following command:</p>
+<pre><code>docker network ls
+</code></pre>
+
+<p>Now let's create our service with the following command:</p>
+<pre><code>docker service create --name myservice2 --network my-net -p 80:80 --replicas 12 [image name]:[version]
+</code></pre>
+
+<p>Running the following command should show that all of our services were created:</p>
+<pre><code>docker service ps myservice2
+</code></pre>
+
+<p>Next, let's take a look at the service with the inspect command:</p>
+<pre><code>docker service inspect --pretty myservice2
+</code></pre>
+
+<p>In the output, you will see basic info like the service name, image, ports, etc. and you will also see the update config. This is configuration that we can set when creating the service to instruct Docker on how to handle our rolling updates.</p>
+<p>For instance, on the service create command above, we could have also specified the --update-parallelism flag and the --update-deplay flag as shown below:</p>
+<pre><code>docker service create --name myservice2 --network my-net -p 80:80 --replicas 12 [image name]:[version] --update-parallelism 2 --update-delay 10m
+</code></pre>
+
+<p>The update-paralellism flag tells Docker that you want to update a set of 2 service instances at a time and the update-delay flag tells Docker that you want to wait for 10 minutes between updates.</p>
+<p>We can run the update and set the config on the same service by executing the following command:</p>
+<pre><code>docker service update --image [image name]:[version] --update-parallelism 2 --update-delay 10s myservice2
+</code></pre>
+
+<p>To monitor the rolling update, we can execute the service ps command:</p>
+<pre><code>docker service ps myservice2
+</code></pre>
+
+<p>After 120 seconds, all 12 of the services will be updated.</p>
                 
               
               
@@ -353,7 +466,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../about/" title="About" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../scaling-services/" title="Scaling Services" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -362,25 +475,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                About
+                Scaling Services
               </div>
             </div>
           </a>
         
-        
-          <a href="../../working-with-containers/what-is-a-container/" title="What is a Container?" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                What is a Container?
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
-            </div>
-          </a>
         
       </nav>
     </div>

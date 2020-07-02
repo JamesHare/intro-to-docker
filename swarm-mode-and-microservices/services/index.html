@@ -15,7 +15,7 @@
     
     
       
-        <title>Swarm Mode and Microservices - Intro to Docker</title>
+        <title>Services - Intro to Docker</title>
       
     
     
@@ -48,7 +48,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#coming-soon" class="md-skip">
+        <a href="#services" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +76,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Swarm Mode and Microservices
+              Services
             
           </span>
         </div>
@@ -173,30 +173,18 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../overview-of-docker/coming-soon/" title="Overview of Docker" class="md-nav__link">
-      Overview of Docker
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-3">
       Working with Containers
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Working with Containers" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -289,6 +277,57 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Swarm Mode and Microservices
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Swarm Mode and Microservices" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Swarm Mode and Microservices
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../swarm-mode-theory/" title="Swarm Mode Theory" class="md-nav__link">
+      Swarm Mode Theory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configuring-swarm-mode/" title="Configuring Swarm Mode" class="md-nav__link">
+      Configuring Swarm Mode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -296,10 +335,39 @@
       
     
     
-    <a href="./" title="Swarm Mode and Microservices" class="md-nav__link md-nav__link--active">
-      Swarm Mode and Microservices
+    <a href="./" title="Services" class="md-nav__link md-nav__link--active">
+      Services
     </a>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scaling-services/" title="Scaling Services" class="md-nav__link">
+      Scaling Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rolling-updates/" title="Rolling Updates" class="md-nav__link">
+      Rolling Updates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -334,7 +402,24 @@
                   
                 
                 
-                <h1 id="coming-soon">Coming Soon</h1>
+                <h1 id="services">Services</h1>
+<p>Services are all about simplifying large scale deployments. We can manage services will the following command:</p>
+<pre><code>docker service &lt;create | ls | ps | inspect | update| rm&gt;
+</code></pre>
+
+<p>We can start a service with the following command:</p>
+<pre><code>docker service create --name myservice1 -p 8080:8080 --replicas 5 [image name]
+</code></pre>
+
+<p>If we run the "docker ps" command after running the command above, we will see 5 service instances (or containers).</p>
+<p>We can also use the inspect command to get more information about the service:</p>
+<pre><code>docker service inspect myservice1
+</code></pre>
+
+<p>The most important value we can observe from the inspect command is the network information and endpoints.</p>
+<p>If deployed a web app, you will be able to enter any of the endpoints (or ip addresses) of the containers with port 8080 and it shuold serve up your user interface.</p>
+<p>The beauty of what we just did, is that we automatically get a fully container aware load balancer. Meaning that no matter what container we hit, we will get our service which will be serving our web app. Docker officially calls this load balancer the "routing mesh."</p>
+<p>As you may remember, we have a total of 6 worker nodes in the swarm. Since we asked docker to spin up (or create) 5 replicas of our service, each one will be attached to a worker node (leaving a 6th worker node with nothing attached).</p>
                 
               
               
@@ -353,7 +438,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../working-with-containers/list-of-commands/" title="List of Common Docker Commands" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../configuring-swarm-mode/" title="Configuring Swarm Mode" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -362,11 +447,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                List of Common Docker Commands
+                Configuring Swarm Mode
               </div>
             </div>
           </a>
         
+        
+          <a href="../scaling-services/" title="Scaling Services" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Scaling Services
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
